@@ -34,10 +34,8 @@
       <li><a href="index.html#about">About Us</a></li>
       <li><a href="index.html#the-herd">The Herd</a></li>
       <li><a href="index.html#contact">Contact</a></li>
+      <li><a href="friends.html">Friends &amp; Neighbors</a></li>
     </ul>
-    <a href="checkout.html" class="nav-cart-btn" aria-label="View cart">
-      <span aria-hidden="true">🛒</span> Cart <span class="cart-badge" aria-live="polite">0</span>
-    </a>
     <button class="nav-mobile-toggle" aria-expanded="false" aria-controls="nav-links-list" aria-label="Open navigation menu">☰</button>
   </div>
 </nav>
@@ -76,9 +74,7 @@
             <div>
               <span class="product-price">Contact for pricing</span>
             </div>
-            <button class="add-to-cart" data-id="quarterbeef" data-name="Quarter Beef (~110 lbs)" data-price="0">
-              + Add to Cart
-            </button>
+            <a href="index.html#contact" class="btn btn-outline btn-sm" style="text-align:center;">Contact to Order</a>
           </div>
         </div>
       </div>
@@ -99,16 +95,14 @@
             <div>
               <span class="product-price">Contact for pricing</span>
             </div>
-            <button class="add-to-cart" data-id="halfbeef" data-name="Half Beef (~220 lbs)" data-price="0">
-              + Add to Cart
-            </button>
+            <a href="index.html#contact" class="btn btn-outline btn-sm" style="text-align:center;">Contact to Order</a>
           </div>
         </div>
       </div>
 
       <!-- WHOLE BEEF -->
       <div class="product-card">
-        <div class="product-img lazy-bg" data-bg="https://images.unsplash.com/photo-1570042225831-d98fa7577f1e?w=600&q=80" role="img" aria-label="Whole beef package" style="background:linear-gradient(rgba(0,0,0,.15),rgba(0,0,0,.35)) var(--brown-mid);background-size:cover;background-position:center;">
+        <div class="product-img lazy-bg" data-bg="Images/bull2.avif" role="img" aria-label="Whole beef package" style="background:linear-gradient(rgba(0,0,0,.15),rgba(0,0,0,.35)) var(--brown-mid);background-size:cover;background-position:center;">
           <span class="product-badge bulk">~440 lbs</span>
         </div>
         <div class="product-body">
@@ -122,9 +116,7 @@
             <div>
               <span class="product-price">Contact for pricing</span>
             </div>
-            <button class="add-to-cart" data-id="wholebeef" data-name="Whole Beef (~440 lbs)" data-price="0">
-              + Add to Cart
-            </button>
+            <a href="index.html#contact" class="btn btn-outline btn-sm" style="text-align:center;">Contact to Order</a>
           </div>
         </div>
       </div>
@@ -143,9 +135,7 @@
               <span class="product-price">$98.00</span>
               <span class="product-unit">~10 lbs · curated selection</span>
             </div>
-            <button class="add-to-cart" data-id="sampler" data-name="Moser Sampler Box (~10 lbs)" data-price="98.00">
-              + Add to Cart
-            </button>
+            <a href="index.html#contact" class="btn btn-outline btn-sm" style="text-align:center;">Contact to Order</a>
           </div>
         </div>
       </div>
@@ -196,10 +186,10 @@
         <h5>Shop</h5>
         <ul>
           <li><a href="products.html">All Beef</a></li>
-          <li><a href="products.html">Steaks &amp; Cuts</a></li>
-          <li><a href="products.html">Ground Beef</a></li>
-          <li><a href="products.html">Roasts &amp; Briskets</a></li>
-          <li><a href="products.html">Bulk Bundles</a></li>
+          <li><a href="products.html">Quarter Beef</a></li>
+          <li><a href="products.html">Half Beef</a></li>
+          <li><a href="products.html">Whole Beef</a></li>
+          <li><a href="products.html">Moser Sampler Box</a></li>
         </ul>
       </div>
       <div class="footer-col">
@@ -207,7 +197,6 @@
         <ul>
           <li><a href="index.html#about">Our Story</a></li>
           <li><a href="index.html#contact">Contact Us</a></li>
-          <li><a href="checkout.html">My Cart</a></li>
           <li><a href="index.html#contact">Delivery Info</a></li>
         </ul>
       </div>
@@ -219,7 +208,6 @@
   </div>
 </footer>
 
-<script src="cart.js"></script>
 <script>
   // ── MOBILE NAV TOGGLE ──
   const toggle = document.querySelector('.nav-mobile-toggle');
@@ -262,24 +250,6 @@
       el.style.backgroundImage = `linear-gradient(rgba(0,0,0,.15),rgba(0,0,0,.35)),url('${el.dataset.bg}')`;
     });
   }
-
-  document.querySelectorAll('.add-to-cart').forEach(btn => {
-    btn.addEventListener('click', () => {
-      addToCart({
-        id:    btn.dataset.id,
-        name:  btn.dataset.name,
-        price: parseFloat(btn.dataset.price)
-      });
-      const orig = btn.textContent;
-      btn.textContent = '✓ Added!';
-      btn.classList.add('added');
-      showToast('🛒 ' + btn.dataset.name + ' added to cart!');
-      setTimeout(() => {
-        btn.textContent = orig;
-        btn.classList.remove('added');
-      }, 1800);
-    });
-  });
 </script>
 </body>
 </html>

@@ -35,10 +35,8 @@
       <li><a href="index.html#about">About Us</a></li>
       <li><a href="index.html#the-herd">The Herd</a></li>
       <li><a href="index.html#contact">Contact</a></li>
+      <li><a href="friends.html">Friends &amp; Neighbors</a></li>
     </ul>
-    <a href="checkout.html" class="nav-cart-btn" aria-label="View cart">
-      <span aria-hidden="true">🛒</span> Cart <span class="cart-badge" aria-live="polite">0</span>
-    </a>
     <button class="nav-mobile-toggle" aria-expanded="false" aria-controls="nav-links-list" aria-label="Open navigation menu">☰</button>
   </div>
 </nav>
@@ -95,7 +93,7 @@
             <div class="stat-label">Generation Ranch Family</div>
           </div>
           <div>
-            <div class="stat-num">125</div>
+            <div class="stat-num">125+</div>
             <div class="stat-label">Years on This Land</div>
           </div>
         </div>
@@ -216,7 +214,7 @@
       </div>
 
       <div style="background:var(--white);border-radius:8px;overflow:hidden;box-shadow:0 2px 10px rgba(0,0,0,.08);">
-        <div class="lazy-bg" data-bg="https://images.unsplash.com/photo-1570042225831-d98fa7577f1e?w=600&q=80" role="img" aria-label="Whole beef package" style="height:180px;background:linear-gradient(rgba(0,0,0,.2),rgba(0,0,0,.4)) var(--brown-mid);background-size:cover;background-position:center;"></div>
+        <div class="lazy-bg" data-bg="Images/bull2.avif" role="img" aria-label="Whole beef package" style="height:180px;background:linear-gradient(rgba(0,0,0,.2),rgba(0,0,0,.4)) var(--brown-mid);background-size:cover;background-position:center;"></div>
         <div style="padding:20px;">
           <p style="font-size:11px;letter-spacing:.12em;text-transform:uppercase;color:var(--tan);font-family:Georgia,serif;margin-bottom:4px;">~440 lbs</p>
           <h3 style="font-size:19px;color:var(--brown-dark);margin-bottom:6px;">Whole Beef</h3>
@@ -267,7 +265,7 @@
         <span class="section-label">Get In Touch</span>
         <h2 class="section-title">We'd Love to Hear From You</h2>
         <div class="divider"></div>
-        <p style="margin-bottom:28px;">Have questions about our beef, want to place a large order, or just want to come see the ranch? Reach out anytime — we're a real family and we answer our own phone.</p>
+        <p style="margin-bottom:28px;">Have questions about our beef, want to place an order, or just want to come see the ranch? Reach out anytime — we're a real family and we answer our own phone.</p>
 
         <div class="contact-detail">
           <span class="contact-detail-icon">📍</span>
@@ -317,6 +315,17 @@
             <input type="tel" id="c-phone" placeholder="(940) 555-0000" autocomplete="tel" />
           </div>
           <div class="form-group">
+            <label for="c-product">Product (optional)</label>
+            <select id="c-product">
+              <option value="">— Select a product —</option>
+              <option value="Quarter Beef">Quarter Beef (~110 lbs)</option>
+              <option value="Half Beef">Half Beef (~220 lbs)</option>
+              <option value="Whole Beef">Whole Beef (~440 lbs)</option>
+              <option value="Moser Sampler Box">Moser Sampler Box (~10 lbs)</option>
+              <option value="Custom">Custom</option>
+            </select>
+          </div>
+          <div class="form-group">
             <label for="c-msg">Message</label>
             <textarea id="c-msg" placeholder="Tell us what you're looking for..." required></textarea>
           </div>
@@ -345,10 +354,10 @@
         <h5>Shop</h5>
         <ul>
           <li><a href="products.html">All Beef</a></li>
-          <li><a href="products.html">Steaks &amp; Cuts</a></li>
-          <li><a href="products.html">Ground Beef</a></li>
-          <li><a href="products.html">Roasts &amp; Briskets</a></li>
-          <li><a href="products.html">Bulk Bundles</a></li>
+          <li><a href="products.html">Quarter Beef</a></li>
+          <li><a href="products.html">Half Beef</a></li>
+          <li><a href="products.html">Whole Beef</a></li>
+          <li><a href="products.html">Moser Sampler Box</a></li>
         </ul>
       </div>
       <div class="footer-col">
@@ -356,7 +365,6 @@
         <ul>
           <li><a href="index.html#about">Our Story</a></li>
           <li><a href="index.html#contact">Contact Us</a></li>
-          <li><a href="checkout.html">My Cart</a></li>
           <li><a href="index.html#contact">Delivery Info</a></li>
           <li><a href="index.html#contact">Ranch Visits</a></li>
         </ul>
@@ -369,7 +377,6 @@
   </div>
 </footer>
 
-<script src="cart.js"></script>
 <script>
   function handleContact(e) {
     e.preventDefault();
